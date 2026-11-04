@@ -1,0 +1,1365 @@
+[
+  {
+    "name": "lcs-both-empty:lcs",
+    "input": {
+      "task": "lcs",
+      "a": "",
+      "b": ""
+    },
+    "expected": 0,
+    "actual": {
+      "length": 0,
+      "sequence": ""
+    },
+    "passed": true
+  },
+  {
+    "name": "lcs-left-empty:lcs",
+    "input": {
+      "task": "lcs",
+      "a": "",
+      "b": "abc"
+    },
+    "expected": 0,
+    "actual": {
+      "length": 0,
+      "sequence": ""
+    },
+    "passed": true
+  },
+  {
+    "name": "lcs-right-empty:lcs",
+    "input": {
+      "task": "lcs",
+      "a": "abc",
+      "b": ""
+    },
+    "expected": 0,
+    "actual": {
+      "length": 0,
+      "sequence": ""
+    },
+    "passed": true
+  },
+  {
+    "name": "lcs-ties:lcs",
+    "input": {
+      "task": "lcs",
+      "a": "ABCBDAB",
+      "b": "BDCABA"
+    },
+    "expected": 4,
+    "actual": {
+      "length": 4,
+      "sequence": "BCBA"
+    },
+    "passed": true
+  },
+  {
+    "name": "lcs-subsequence:lcs",
+    "input": {
+      "task": "lcs",
+      "a": "tea_time",
+      "b": "team"
+    },
+    "expected": 4,
+    "actual": {
+      "length": 4,
+      "sequence": "team"
+    },
+    "passed": true
+  },
+  {
+    "name": "lcs-repeated:lcs",
+    "input": {
+      "task": "lcs",
+      "a": "aaaa",
+      "b": "aa"
+    },
+    "expected": 2,
+    "actual": {
+      "length": 2,
+      "sequence": "aa"
+    },
+    "passed": true
+  },
+  {
+    "name": "merge-empty:merge",
+    "input": {
+      "task": "merge",
+      "sizes": []
+    },
+    "expected": 0,
+    "actual": {
+      "cost": 0,
+      "plan": []
+    },
+    "passed": true
+  },
+  {
+    "name": "merge-single:merge",
+    "input": {
+      "task": "merge",
+      "sizes": [
+        1000000000
+      ]
+    },
+    "expected": 0,
+    "actual": {
+      "cost": 0,
+      "plan": []
+    },
+    "passed": true
+  },
+  {
+    "name": "merge-zero-ties:merge",
+    "input": {
+      "task": "merge",
+      "sizes": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "expected": 0,
+    "actual": {
+      "cost": 0,
+      "plan": [
+        [
+          2,
+          2,
+          3
+        ],
+        [
+          1,
+          1,
+          3
+        ],
+        [
+          0,
+          0,
+          3
+        ]
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "merge-adjacency:merge",
+    "input": {
+      "task": "merge",
+      "sizes": [
+        1,
+        100,
+        1
+      ]
+    },
+    "expected": 203,
+    "actual": {
+      "cost": 203,
+      "plan": [
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "merge-chronology:merge",
+    "input": {
+      "task": "merge",
+      "sizes": [
+        2,
+        3,
+        4
+      ]
+    },
+    "expected": 14,
+    "actual": {
+      "cost": 14,
+      "plan": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ]
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "merge-64-bit:merge",
+    "input": {
+      "task": "merge",
+      "sizes": [
+        1000000000,
+        1000000000,
+        1000000000,
+        1000000000
+      ]
+    },
+    "expected": 8000000000,
+    "actual": {
+      "cost": 8000000000,
+      "plan": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          2,
+          3
+        ],
+        [
+          0,
+          1,
+          3
+        ]
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "tree-empty:tree",
+    "input": {
+      "task": "tree",
+      "n": 0,
+      "weights": [],
+      "edges": []
+    },
+    "expected": 0,
+    "actual": {
+      "weight": 0,
+      "selected": []
+    },
+    "passed": true
+  },
+  {
+    "name": "tree-single-negative:tree",
+    "input": {
+      "task": "tree",
+      "n": 1,
+      "weights": [
+        -1000000000
+      ],
+      "edges": []
+    },
+    "expected": 0,
+    "actual": {
+      "weight": 0,
+      "selected": []
+    },
+    "passed": true
+  },
+  {
+    "name": "tree-negative:tree",
+    "input": {
+      "task": "tree",
+      "n": 3,
+      "weights": [
+        -1,
+        -2,
+        -3
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    "expected": 0,
+    "actual": {
+      "weight": 0,
+      "selected": []
+    },
+    "passed": true
+  },
+  {
+    "name": "tree-zero:tree",
+    "input": {
+      "task": "tree",
+      "n": 3,
+      "weights": [
+        0,
+        0,
+        0
+      ],
+      "edges": [
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    "expected": 0,
+    "actual": {
+      "weight": 0,
+      "selected": []
+    },
+    "passed": true
+  },
+  {
+    "name": "tree-tie:tree",
+    "input": {
+      "task": "tree",
+      "n": 3,
+      "weights": [
+        1,
+        2,
+        1
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    "expected": 2,
+    "actual": {
+      "weight": 2,
+      "selected": [
+        1
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "tree-64-bit:tree",
+    "input": {
+      "task": "tree",
+      "n": 5,
+      "weights": [
+        1000000000,
+        1000000000,
+        1000000000,
+        1000000000,
+        1000000000
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ]
+      ]
+    },
+    "expected": 4000000000,
+    "actual": {
+      "weight": 4000000000,
+      "selected": [
+        4,
+        3,
+        2,
+        1
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "search-empty:naive",
+    "input": {
+      "task": "naive",
+      "text": "",
+      "pattern": ""
+    },
+    "expected": [
+      0
+    ],
+    "actual": {
+      "positions": [
+        0
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "search-empty:kmp",
+    "input": {
+      "task": "kmp",
+      "text": "",
+      "pattern": ""
+    },
+    "expected": [
+      0
+    ],
+    "actual": {
+      "positions": [
+        0
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "search-empty:rk",
+    "input": {
+      "task": "rk",
+      "text": "",
+      "pattern": ""
+    },
+    "expected": [
+      0
+    ],
+    "actual": {
+      "positions": [
+        0
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "search-empty-pattern:naive",
+    "input": {
+      "task": "naive",
+      "text": " a!",
+      "pattern": ""
+    },
+    "expected": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "actual": {
+      "positions": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "search-empty-pattern:kmp",
+    "input": {
+      "task": "kmp",
+      "text": " a!",
+      "pattern": ""
+    },
+    "expected": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "actual": {
+      "positions": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "search-empty-pattern:rk",
+    "input": {
+      "task": "rk",
+      "text": " a!",
+      "pattern": ""
+    },
+    "expected": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "actual": {
+      "positions": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "search-empty-text:naive",
+    "input": {
+      "task": "naive",
+      "text": "",
+      "pattern": "a"
+    },
+    "expected": [],
+    "actual": {
+      "positions": []
+    },
+    "passed": true
+  },
+  {
+    "name": "search-empty-text:kmp",
+    "input": {
+      "task": "kmp",
+      "text": "",
+      "pattern": "a"
+    },
+    "expected": [],
+    "actual": {
+      "positions": []
+    },
+    "passed": true
+  },
+  {
+    "name": "search-empty-text:rk",
+    "input": {
+      "task": "rk",
+      "text": "",
+      "pattern": "a"
+    },
+    "expected": [],
+    "actual": {
+      "positions": []
+    },
+    "passed": true
+  },
+  {
+    "name": "search-long-pattern:naive",
+    "input": {
+      "task": "naive",
+      "text": "a",
+      "pattern": "aa"
+    },
+    "expected": [],
+    "actual": {
+      "positions": []
+    },
+    "passed": true
+  },
+  {
+    "name": "search-long-pattern:kmp",
+    "input": {
+      "task": "kmp",
+      "text": "a",
+      "pattern": "aa"
+    },
+    "expected": [],
+    "actual": {
+      "positions": []
+    },
+    "passed": true
+  },
+  {
+    "name": "search-long-pattern:rk",
+    "input": {
+      "task": "rk",
+      "text": "a",
+      "pattern": "aa"
+    },
+    "expected": [],
+    "actual": {
+      "positions": []
+    },
+    "passed": true
+  },
+  {
+    "name": "search-overlap:naive",
+    "input": {
+      "task": "naive",
+      "text": "aaaaa",
+      "pattern": "aaa"
+    },
+    "expected": [
+      0,
+      1,
+      2
+    ],
+    "actual": {
+      "positions": [
+        0,
+        1,
+        2
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "search-overlap:kmp",
+    "input": {
+      "task": "kmp",
+      "text": "aaaaa",
+      "pattern": "aaa"
+    },
+    "expected": [
+      0,
+      1,
+      2
+    ],
+    "actual": {
+      "positions": [
+        0,
+        1,
+        2
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "search-overlap:rk",
+    "input": {
+      "task": "rk",
+      "text": "aaaaa",
+      "pattern": "aaa"
+    },
+    "expected": [
+      0,
+      1,
+      2
+    ],
+    "actual": {
+      "positions": [
+        0,
+        1,
+        2
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "search-fallback:naive",
+    "input": {
+      "task": "naive",
+      "text": "ababababacababaca",
+      "pattern": "ababaca"
+    },
+    "expected": [
+      4,
+      10
+    ],
+    "actual": {
+      "positions": [
+        4,
+        10
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "search-fallback:kmp",
+    "input": {
+      "task": "kmp",
+      "text": "ababababacababaca",
+      "pattern": "ababaca"
+    },
+    "expected": [
+      4,
+      10
+    ],
+    "actual": {
+      "positions": [
+        4,
+        10
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "search-fallback:rk",
+    "input": {
+      "task": "rk",
+      "text": "ababababacababaca",
+      "pattern": "ababaca"
+    },
+    "expected": [
+      4,
+      10
+    ],
+    "actual": {
+      "positions": [
+        4,
+        10
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "search-case-space:naive",
+    "input": {
+      "task": "naive",
+      "text": "A a!A a!",
+      "pattern": "a!"
+    },
+    "expected": [
+      2,
+      6
+    ],
+    "actual": {
+      "positions": [
+        2,
+        6
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "search-case-space:kmp",
+    "input": {
+      "task": "kmp",
+      "text": "A a!A a!",
+      "pattern": "a!"
+    },
+    "expected": [
+      2,
+      6
+    ],
+    "actual": {
+      "positions": [
+        2,
+        6
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "search-case-space:rk",
+    "input": {
+      "task": "rk",
+      "text": "A a!A a!",
+      "pattern": "a!"
+    },
+    "expected": [
+      2,
+      6
+    ],
+    "actual": {
+      "positions": [
+        2,
+        6
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "rk-collision:naive",
+    "input": {
+      "task": "naive",
+      "text": "abdj",
+      "pattern": "ab"
+    },
+    "expected": [
+      0
+    ],
+    "actual": {
+      "positions": [
+        0
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "rk-collision:kmp",
+    "input": {
+      "task": "kmp",
+      "text": "abdj",
+      "pattern": "ab"
+    },
+    "expected": [
+      0
+    ],
+    "actual": {
+      "positions": [
+        0
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "rk-collision:rk",
+    "input": {
+      "task": "rk",
+      "text": "abdj",
+      "pattern": "ab"
+    },
+    "expected": [
+      0
+    ],
+    "actual": {
+      "positions": [
+        0
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "rk-collision-reverse:naive",
+    "input": {
+      "task": "naive",
+      "text": "abdj",
+      "pattern": "dj"
+    },
+    "expected": [
+      2
+    ],
+    "actual": {
+      "positions": [
+        2
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "rk-collision-reverse:kmp",
+    "input": {
+      "task": "kmp",
+      "text": "abdj",
+      "pattern": "dj"
+    },
+    "expected": [
+      2
+    ],
+    "actual": {
+      "positions": [
+        2
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "rk-collision-reverse:rk",
+    "input": {
+      "task": "rk",
+      "text": "abdj",
+      "pattern": "dj"
+    },
+    "expected": [
+      2
+    ],
+    "actual": {
+      "positions": [
+        2
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "rk-negative-remainder:naive",
+    "input": {
+      "task": "naive",
+      "text": "zab",
+      "pattern": "ab"
+    },
+    "expected": [
+      1
+    ],
+    "actual": {
+      "positions": [
+        1
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "rk-negative-remainder:kmp",
+    "input": {
+      "task": "kmp",
+      "text": "zab",
+      "pattern": "ab"
+    },
+    "expected": [
+      1
+    ],
+    "actual": {
+      "positions": [
+        1
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "rk-negative-remainder:rk",
+    "input": {
+      "task": "rk",
+      "text": "zab",
+      "pattern": "ab"
+    },
+    "expected": [
+      1
+    ],
+    "actual": {
+      "positions": [
+        1
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "suffix-empty:suffix",
+    "input": {
+      "task": "suffix",
+      "text": ""
+    },
+    "expected": {
+      "sa": [],
+      "lcp": [],
+      "length": 0
+    },
+    "actual": {
+      "sa": [],
+      "lcp": [],
+      "repeated": ""
+    },
+    "passed": true
+  },
+  {
+    "name": "suffix-one:suffix",
+    "input": {
+      "task": "suffix",
+      "text": "~"
+    },
+    "expected": {
+      "sa": [
+        0
+      ],
+      "lcp": [
+        0
+      ],
+      "length": 0
+    },
+    "actual": {
+      "sa": [
+        0
+      ],
+      "lcp": [
+        0
+      ],
+      "repeated": ""
+    },
+    "passed": true
+  },
+  {
+    "name": "suffix-all-equal:suffix",
+    "input": {
+      "task": "suffix",
+      "text": "aaaa"
+    },
+    "expected": {
+      "sa": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "lcp": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "length": 3
+    },
+    "actual": {
+      "sa": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "lcp": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "repeated": "aaa"
+    },
+    "passed": true
+  },
+  {
+    "name": "suffix-distinct:suffix",
+    "input": {
+      "task": "suffix",
+      "text": "cba"
+    },
+    "expected": {
+      "sa": [
+        2,
+        1,
+        0
+      ],
+      "lcp": [
+        0,
+        0,
+        0
+      ],
+      "length": 0
+    },
+    "actual": {
+      "sa": [
+        2,
+        1,
+        0
+      ],
+      "lcp": [
+        0,
+        0,
+        0
+      ],
+      "repeated": ""
+    },
+    "passed": true
+  },
+  {
+    "name": "suffix-overlap:suffix",
+    "input": {
+      "task": "suffix",
+      "text": "banana"
+    },
+    "expected": {
+      "sa": [
+        5,
+        3,
+        1,
+        0,
+        4,
+        2
+      ],
+      "lcp": [
+        0,
+        1,
+        3,
+        0,
+        0,
+        2
+      ],
+      "length": 3
+    },
+    "actual": {
+      "sa": [
+        5,
+        3,
+        1,
+        0,
+        4,
+        2
+      ],
+      "lcp": [
+        0,
+        1,
+        3,
+        0,
+        0,
+        2
+      ],
+      "repeated": "ana"
+    },
+    "passed": true
+  },
+  {
+    "name": "suffix-tied-repeats:suffix",
+    "input": {
+      "task": "suffix",
+      "text": "ababcdcd"
+    },
+    "expected": {
+      "sa": [
+        0,
+        2,
+        1,
+        3,
+        6,
+        4,
+        7,
+        5
+      ],
+      "lcp": [
+        0,
+        2,
+        0,
+        1,
+        0,
+        2,
+        0,
+        1
+      ],
+      "length": 2
+    },
+    "actual": {
+      "sa": [
+        0,
+        2,
+        1,
+        3,
+        6,
+        4,
+        7,
+        5
+      ],
+      "lcp": [
+        0,
+        2,
+        0,
+        1,
+        0,
+        2,
+        0,
+        1
+      ],
+      "repeated": "ab"
+    },
+    "passed": true
+  },
+  {
+    "name": "aho-empty-dictionary:aho",
+    "input": {
+      "task": "aho",
+      "patterns": [],
+      "texts": [
+        "abc",
+        ""
+      ]
+    },
+    "expected": [
+      [],
+      []
+    ],
+    "actual": {
+      "counts": [
+        [],
+        []
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "aho-empty-texts:aho",
+    "input": {
+      "task": "aho",
+      "patterns": [
+        "abc"
+      ],
+      "texts": []
+    },
+    "expected": [],
+    "actual": {
+      "counts": []
+    },
+    "passed": true
+  },
+  {
+    "name": "aho-empty-text:aho",
+    "input": {
+      "task": "aho",
+      "patterns": [
+        "a",
+        "aa",
+        "a"
+      ],
+      "texts": [
+        ""
+      ]
+    },
+    "expected": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "actual": {
+      "counts": [
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "aho-suffix-duplicates-reset:aho",
+    "input": {
+      "task": "aho",
+      "patterns": [
+        "he",
+        "she",
+        "he",
+        "e"
+      ],
+      "texts": [
+        "sheshe",
+        "sheshe",
+        "",
+        "he"
+      ]
+    },
+    "expected": [
+      [
+        2,
+        2,
+        2,
+        2
+      ],
+      [
+        2,
+        2,
+        2,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        1
+      ]
+    ],
+    "actual": {
+      "counts": [
+        [
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ]
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "aho-overlap:aho",
+    "input": {
+      "task": "aho",
+      "patterns": [
+        "a",
+        "aa",
+        "aaa",
+        "aa"
+      ],
+      "texts": [
+        "aaaa"
+      ]
+    },
+    "expected": [
+      [
+        4,
+        3,
+        2,
+        3
+      ]
+    ],
+    "actual": {
+      "counts": [
+        [
+          4,
+          3,
+          2,
+          3
+        ]
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "aho-ascii:aho",
+    "input": {
+      "task": "aho",
+      "patterns": [
+        " ",
+        "~",
+        "A!",
+        "!"
+      ],
+      "texts": [
+        " ~A! ~A!",
+        ""
+      ]
+    },
+    "expected": [
+      [
+        2,
+        2,
+        2,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "actual": {
+      "counts": [
+        [
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "passed": true
+  }
+]

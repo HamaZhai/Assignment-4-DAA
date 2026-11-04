@@ -1,0 +1,168 @@
+{
+  "seed": 4102027,
+  "environment": {
+    "recorded_at": "2026-11-04T15:02:44.400651+05:00",
+    "os": "Windows-11-10.0.26300-SP0",
+    "python": "3.12.2",
+    "processor": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+    "logical_cpus": 16,
+    "dotnet_runtimes": "Microsoft.AspNetCore.App 6.0.36 [C:\\Program Files\\dotnet\\shared\\Microsoft.AspNetCore.App]\nMicrosoft.AspNetCore.App 8.0.26 [C:\\Program Files\\dotnet\\shared\\Microsoft.AspNetCore.App]\nMicrosoft.AspNetCore.App 9.0.0 [C:\\Program Files\\dotnet\\shared\\Microsoft.AspNetCore.App]\nMicrosoft.AspNetCore.App 9.0.15 [C:\\Program Files\\dotnet\\shared\\Microsoft.AspNetCore.App]\nMicrosoft.NETCore.App 6.0.36 [C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App]\nMicrosoft.NETCore.App 7.0.18 [C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App]\nMicrosoft.NETCore.App 8.0.26 [C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App]\nMicrosoft.NETCore.App 9.0.0 [C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App]\nMicrosoft.NETCore.App 9.0.15 [C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App]\nMicrosoft.WindowsDesktop.App 6.0.36 [C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App]\nMicrosoft.WindowsDesktop.App 7.0.18 [C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App]\nMicrosoft.WindowsDesktop.App 8.0.26 [C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App]\nMicrosoft.WindowsDesktop.App 9.0.0 [C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App]\nMicrosoft.WindowsDesktop.App 9.0.15 [C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App]",
+    "dotnet_sdk": "9.0.313",
+    "cpu_model": "13th Gen Intel(R) Core(TM) i7-13620H",
+    "physical_ram_bytes": 16961822720,
+    "submission_source_sha256": "399fde700602fe431f7a7d32ae28e22ce035ec0f36e52d1999f31426a0f851ae"
+  },
+  "groups": [
+    {
+      "task": "lcs",
+      "passed": 3,
+      "cases": [
+        "equal-1000",
+        "reversed-blocks",
+        "random-1000"
+      ],
+      "elapsed_seconds": 0.0910952999984147,
+      "output_bytes": 2115,
+      "sampled_peak_working_set_mib": 28.3515625,
+      "cpu_affinity": "one available logical CPU",
+      "timeout_seconds": 20
+    },
+    {
+      "task": "merge",
+      "passed": 3,
+      "cases": [
+        "equal-200-64-bit",
+        "zero-200-skew-plan",
+        "one-large-199-zero"
+      ],
+      "elapsed_seconds": 0.07946680000168271,
+      "output_bytes": 7667,
+      "sampled_peak_working_set_mib": 25.00390625,
+      "cpu_affinity": "one available logical CPU",
+      "timeout_seconds": 20
+    },
+    {
+      "task": "tree",
+      "passed": 4,
+      "cases": [
+        "chain-100000-64-bit",
+        "negative-chain-100000",
+        "star-100000-64-bit",
+        "random-tree-matching-oracle"
+      ],
+      "elapsed_seconds": 0.9334597999986727,
+      "output_bytes": 1238716,
+      "sampled_peak_working_set_mib": 165.7890625,
+      "cpu_affinity": "one available logical CPU",
+      "timeout_seconds": 20
+    },
+    {
+      "task": "naive",
+      "passed": 3,
+      "cases": [
+        "dense-3000",
+        "late-mismatch-3000",
+        "empty-pattern-3000"
+      ],
+      "elapsed_seconds": 0.10284419999516103,
+      "output_bytes": 20339,
+      "sampled_peak_working_set_mib": 25.56640625,
+      "cpu_affinity": "one available logical CPU",
+      "timeout_seconds": 20
+    },
+    {
+      "task": "kmp",
+      "passed": 3,
+      "cases": [
+        "dense-200000-100000",
+        "late-mismatch-200000",
+        "empty-pattern-200000"
+      ],
+      "elapsed_seconds": 0.20711580000352114,
+      "output_bytes": 1877843,
+      "sampled_peak_working_set_mib": 56.0625,
+      "cpu_affinity": "one available logical CPU",
+      "timeout_seconds": 20
+    },
+    {
+      "task": "rk",
+      "passed": 4,
+      "cases": [
+        "dense-product-20000000",
+        "collision-long-prefix",
+        "long-pattern-10000",
+        "empty-pattern-10000"
+      ],
+      "elapsed_seconds": 0.13544359999650624,
+      "output_bytes": 87857,
+      "sampled_peak_working_set_mib": 27.1796875,
+      "cpu_affinity": "one available logical CPU",
+      "timeout_seconds": 20
+    },
+    {
+      "task": "suffix",
+      "passed": 3,
+      "cases": [
+        "equal-50000",
+        "periodic-50000",
+        "random-ascii-50000"
+      ],
+      "elapsed_seconds": 0.2443697999988217,
+      "output_bytes": 1644545,
+      "sampled_peak_working_set_mib": 60.046875,
+      "cpu_affinity": "one available logical CPU",
+      "timeout_seconds": 20
+    },
+    {
+      "task": "aho",
+      "passed": 1,
+      "cases": [
+        "dense-duplicates-200000"
+      ],
+      "elapsed_seconds": 0.09304619999602437,
+      "output_bytes": 70015,
+      "sampled_peak_working_set_mib": 31.30078125,
+      "cpu_affinity": "one available logical CPU",
+      "timeout_seconds": 20
+    },
+    {
+      "task": "aho",
+      "passed": 1,
+      "cases": [
+        "deep-trie-100000"
+      ],
+      "elapsed_seconds": 0.17092059999413323,
+      "output_bytes": 26,
+      "sampled_peak_working_set_mib": 68.26953125,
+      "cpu_affinity": "one available logical CPU",
+      "timeout_seconds": 20
+    },
+    {
+      "task": "aho",
+      "passed": 1,
+      "cases": [
+        "wide-trie-100000-100-texts"
+      ],
+      "elapsed_seconds": 0.6188407000008738,
+      "output_bytes": 2000213,
+      "sampled_peak_working_set_mib": 143.203125,
+      "cpu_affinity": "one available logical CPU",
+      "timeout_seconds": 20
+    },
+    {
+      "task": "aho",
+      "passed": 1,
+      "cases": [
+        "maximum-duplicate-columns-reset"
+      ],
+      "elapsed_seconds": 0.51011849999486,
+      "output_bytes": 4970213,
+      "sampled_peak_working_set_mib": 117.4453125,
+      "cpu_affinity": "one available logical CPU",
+      "timeout_seconds": 20
+    }
+  ],
+  "memory_note": "5ms native-host peak working-set sampling; no 768 MiB container quota imposed",
+  "passed": 27,
+  "failed": 0
+}

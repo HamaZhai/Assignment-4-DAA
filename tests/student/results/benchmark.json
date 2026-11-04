@@ -1,0 +1,504 @@
+{
+  "seed": 4102026,
+  "warmup_calls_per_configuration": 20,
+  "samples": 5,
+  "calls_per_sample": 25,
+  "checksum": 1211625,
+  "runtime": ".NET 8.0.26",
+  "os": "Microsoft Windows 10.0.26300",
+  "architecture": "X64",
+  "processor_count": 1,
+  "stopwatch_frequency": 10000000,
+  "tiered_compilation": "0",
+  "scope": "Public method call including JsonObject extraction and result DOM allocation; checksum/KeepAlive; excludes input generation, parsing, serialization, correctness checks, explicit pre-sample GC and compilation. Natural GC inside each measured block is included. Each raw sample times 25 real calls.",
+  "generator": "System.Random(seed=4102026), random text iid uniform over abcd; pattern sampled from that text. Repetitive text=a^n and pattern=a^m.",
+  "rows": [
+    {
+      "kind": "random",
+      "n": 300,
+      "m": 75,
+      "seed": 4102026,
+      "algorithm": "naive",
+      "pattern_start": 193,
+      "expected_matches": 1,
+      "text_sha256": "c408498196c573d7c14684908f42b7589535fb9c03640bed015b90b8fe6b98a8",
+      "raw_sample_milliseconds": [
+        0.0277,
+        0.0148,
+        0.017,
+        0.014,
+        0.0171
+      ],
+      "microseconds_per_call": [
+        1.1079999999999999,
+        0.5920000000000001,
+        0.68,
+        0.56,
+        0.684
+      ],
+      "median_microseconds_per_call": 0.68,
+      "correct_outputs_checked": true
+    },
+    {
+      "kind": "random",
+      "n": 300,
+      "m": 75,
+      "seed": 4102026,
+      "algorithm": "kmp",
+      "pattern_start": 193,
+      "expected_matches": 1,
+      "text_sha256": "c408498196c573d7c14684908f42b7589535fb9c03640bed015b90b8fe6b98a8",
+      "raw_sample_milliseconds": [
+        0.0351,
+        0.0276,
+        0.0229,
+        0.0187,
+        0.0195
+      ],
+      "microseconds_per_call": [
+        1.4040000000000001,
+        1.1039999999999999,
+        0.9159999999999999,
+        0.7480000000000001,
+        0.78
+      ],
+      "median_microseconds_per_call": 0.9159999999999999,
+      "correct_outputs_checked": true
+    },
+    {
+      "kind": "random",
+      "n": 300,
+      "m": 75,
+      "seed": 4102026,
+      "algorithm": "rk",
+      "pattern_start": 193,
+      "expected_matches": 1,
+      "text_sha256": "c408498196c573d7c14684908f42b7589535fb9c03640bed015b90b8fe6b98a8",
+      "raw_sample_milliseconds": [
+        0.0583,
+        0.0517,
+        0.055,
+        0.0524,
+        0.0525
+      ],
+      "microseconds_per_call": [
+        2.332,
+        2.068,
+        2.2,
+        2.096,
+        2.1
+      ],
+      "median_microseconds_per_call": 2.1,
+      "correct_outputs_checked": true
+    },
+    {
+      "kind": "random",
+      "n": 1000,
+      "m": 250,
+      "seed": 4102026,
+      "algorithm": "naive",
+      "pattern_start": 380,
+      "expected_matches": 1,
+      "text_sha256": "009195ec9895db9e7b510b43786f9870b287fce25b97e8e8bd0d04fefbee7280",
+      "raw_sample_milliseconds": [
+        0.0298,
+        0.0347,
+        0.0305,
+        0.0284,
+        0.0324
+      ],
+      "microseconds_per_call": [
+        1.192,
+        1.3880000000000001,
+        1.22,
+        1.1360000000000001,
+        1.296
+      ],
+      "median_microseconds_per_call": 1.22,
+      "correct_outputs_checked": true
+    },
+    {
+      "kind": "random",
+      "n": 1000,
+      "m": 250,
+      "seed": 4102026,
+      "algorithm": "kmp",
+      "pattern_start": 380,
+      "expected_matches": 1,
+      "text_sha256": "009195ec9895db9e7b510b43786f9870b287fce25b97e8e8bd0d04fefbee7280",
+      "raw_sample_milliseconds": [
+        0.0646,
+        0.0517,
+        0.0589,
+        0.0608,
+        0.0586
+      ],
+      "microseconds_per_call": [
+        2.5840000000000005,
+        2.068,
+        2.356,
+        2.432,
+        2.344
+      ],
+      "median_microseconds_per_call": 2.356,
+      "correct_outputs_checked": true
+    },
+    {
+      "kind": "random",
+      "n": 1000,
+      "m": 250,
+      "seed": 4102026,
+      "algorithm": "rk",
+      "pattern_start": 380,
+      "expected_matches": 1,
+      "text_sha256": "009195ec9895db9e7b510b43786f9870b287fce25b97e8e8bd0d04fefbee7280",
+      "raw_sample_milliseconds": [
+        0.1544,
+        0.1538,
+        0.158,
+        0.1907,
+        0.1562
+      ],
+      "microseconds_per_call": [
+        6.176,
+        6.151999999999999,
+        6.32,
+        7.628000000000001,
+        6.248000000000001
+      ],
+      "median_microseconds_per_call": 6.248000000000001,
+      "correct_outputs_checked": true
+    },
+    {
+      "kind": "random",
+      "n": 3000,
+      "m": 750,
+      "seed": 4102026,
+      "algorithm": "naive",
+      "pattern_start": 698,
+      "expected_matches": 1,
+      "text_sha256": "7805e78fce9c67ea8cb6de7c786f0dcd57f5144e22016224e547191e72ab7e9e",
+      "raw_sample_milliseconds": [
+        0.0858,
+        0.0899,
+        0.0711,
+        0.0919,
+        0.0892
+      ],
+      "microseconds_per_call": [
+        3.432,
+        3.5959999999999996,
+        2.844,
+        3.6759999999999997,
+        3.568
+      ],
+      "median_microseconds_per_call": 3.568,
+      "correct_outputs_checked": true
+    },
+    {
+      "kind": "random",
+      "n": 3000,
+      "m": 750,
+      "seed": 4102026,
+      "algorithm": "kmp",
+      "pattern_start": 698,
+      "expected_matches": 1,
+      "text_sha256": "7805e78fce9c67ea8cb6de7c786f0dcd57f5144e22016224e547191e72ab7e9e",
+      "raw_sample_milliseconds": [
+        0.1612,
+        0.2168,
+        0.1552,
+        0.1371,
+        0.1721
+      ],
+      "microseconds_per_call": [
+        6.448,
+        8.671999999999999,
+        6.208000000000001,
+        5.484,
+        6.8839999999999995
+      ],
+      "median_microseconds_per_call": 6.448,
+      "correct_outputs_checked": true
+    },
+    {
+      "kind": "random",
+      "n": 3000,
+      "m": 750,
+      "seed": 4102026,
+      "algorithm": "rk",
+      "pattern_start": 698,
+      "expected_matches": 1,
+      "text_sha256": "7805e78fce9c67ea8cb6de7c786f0dcd57f5144e22016224e547191e72ab7e9e",
+      "raw_sample_milliseconds": [
+        0.4456,
+        0.4441,
+        0.7135,
+        0.4442,
+        0.4988
+      ],
+      "microseconds_per_call": [
+        17.824,
+        17.764,
+        28.54,
+        17.768,
+        19.952
+      ],
+      "median_microseconds_per_call": 17.824,
+      "correct_outputs_checked": true
+    },
+    {
+      "kind": "repetitive",
+      "n": 300,
+      "m": 75,
+      "seed": 4102026,
+      "algorithm": "naive",
+      "pattern_start": 0,
+      "expected_matches": 226,
+      "text_sha256": "9835fa6bf4e20a9b9ea812506302e98982721a6cf8d2cae67af57129bf21ae90",
+      "raw_sample_milliseconds": [
+        0.4952,
+        0.3882,
+        0.4397,
+        0.3873,
+        0.4011
+      ],
+      "microseconds_per_call": [
+        19.808,
+        15.527999999999999,
+        17.588,
+        15.491999999999997,
+        16.044
+      ],
+      "median_microseconds_per_call": 16.044,
+      "correct_outputs_checked": true
+    },
+    {
+      "kind": "repetitive",
+      "n": 300,
+      "m": 75,
+      "seed": 4102026,
+      "algorithm": "kmp",
+      "pattern_start": 0,
+      "expected_matches": 226,
+      "text_sha256": "9835fa6bf4e20a9b9ea812506302e98982721a6cf8d2cae67af57129bf21ae90",
+      "raw_sample_milliseconds": [
+        0.2236,
+        0.221,
+        0.2345,
+        0.2487,
+        0.231
+      ],
+      "microseconds_per_call": [
+        8.943999999999999,
+        8.84,
+        9.38,
+        9.948,
+        9.24
+      ],
+      "median_microseconds_per_call": 9.24,
+      "correct_outputs_checked": true
+    },
+    {
+      "kind": "repetitive",
+      "n": 300,
+      "m": 75,
+      "seed": 4102026,
+      "algorithm": "rk",
+      "pattern_start": 0,
+      "expected_matches": 226,
+      "text_sha256": "9835fa6bf4e20a9b9ea812506302e98982721a6cf8d2cae67af57129bf21ae90",
+      "raw_sample_milliseconds": [
+        0.4787,
+        0.4969,
+        0.4262,
+        0.4607,
+        0.5679
+      ],
+      "microseconds_per_call": [
+        19.148,
+        19.876,
+        17.048000000000002,
+        18.428,
+        22.715999999999998
+      ],
+      "median_microseconds_per_call": 19.148,
+      "correct_outputs_checked": true
+    },
+    {
+      "kind": "repetitive",
+      "n": 1000,
+      "m": 250,
+      "seed": 4102026,
+      "algorithm": "naive",
+      "pattern_start": 0,
+      "expected_matches": 751,
+      "text_sha256": "41edece42d63e8d9bf515a9ba6932e1c20cbc9f5a5d134645adb5db1b9737ea3",
+      "raw_sample_milliseconds": [
+        2.8969,
+        2.388,
+        2.4002,
+        2.5735,
+        2.6842
+      ],
+      "microseconds_per_call": [
+        115.876,
+        95.52,
+        96.008,
+        102.94,
+        107.36800000000001
+      ],
+      "median_microseconds_per_call": 102.94,
+      "correct_outputs_checked": true
+    },
+    {
+      "kind": "repetitive",
+      "n": 1000,
+      "m": 250,
+      "seed": 4102026,
+      "algorithm": "kmp",
+      "pattern_start": 0,
+      "expected_matches": 751,
+      "text_sha256": "41edece42d63e8d9bf515a9ba6932e1c20cbc9f5a5d134645adb5db1b9737ea3",
+      "raw_sample_milliseconds": [
+        1.2426,
+        0.7608,
+        0.7239,
+        0.7628,
+        0.8355
+      ],
+      "microseconds_per_call": [
+        49.70399999999999,
+        30.432000000000002,
+        28.956,
+        30.512000000000004,
+        33.42
+      ],
+      "median_microseconds_per_call": 30.512000000000004,
+      "correct_outputs_checked": true
+    },
+    {
+      "kind": "repetitive",
+      "n": 1000,
+      "m": 250,
+      "seed": 4102026,
+      "algorithm": "rk",
+      "pattern_start": 0,
+      "expected_matches": 751,
+      "text_sha256": "41edece42d63e8d9bf515a9ba6932e1c20cbc9f5a5d134645adb5db1b9737ea3",
+      "raw_sample_milliseconds": [
+        2.9487,
+        2.8394,
+        3.0453,
+        3.271,
+        3.0638
+      ],
+      "microseconds_per_call": [
+        117.94800000000001,
+        113.57600000000001,
+        121.81200000000001,
+        130.84,
+        122.552
+      ],
+      "median_microseconds_per_call": 121.81200000000001,
+      "correct_outputs_checked": true
+    },
+    {
+      "kind": "repetitive",
+      "n": 3000,
+      "m": 750,
+      "seed": 4102026,
+      "algorithm": "naive",
+      "pattern_start": 0,
+      "expected_matches": 2251,
+      "text_sha256": "556ac82f23f64d2f41b3fb3b9a171791364021aa95c0af6df9e2b5e1d88c8038",
+      "raw_sample_milliseconds": [
+        18.3767,
+        20.1676,
+        19.0462,
+        18.0591,
+        18.136
+      ],
+      "microseconds_per_call": [
+        735.068,
+        806.704,
+        761.8479999999998,
+        722.364,
+        725.44
+      ],
+      "median_microseconds_per_call": 735.068,
+      "correct_outputs_checked": true
+    },
+    {
+      "kind": "repetitive",
+      "n": 3000,
+      "m": 750,
+      "seed": 4102026,
+      "algorithm": "kmp",
+      "pattern_start": 0,
+      "expected_matches": 2251,
+      "text_sha256": "556ac82f23f64d2f41b3fb3b9a171791364021aa95c0af6df9e2b5e1d88c8038",
+      "raw_sample_milliseconds": [
+        2.7474,
+        3.5231,
+        2.9352,
+        2.7652,
+        6.1586
+      ],
+      "microseconds_per_call": [
+        109.89599999999999,
+        140.924,
+        117.40799999999999,
+        110.608,
+        246.34399999999997
+      ],
+      "median_microseconds_per_call": 117.40799999999999,
+      "correct_outputs_checked": true
+    },
+    {
+      "kind": "repetitive",
+      "n": 3000,
+      "m": 750,
+      "seed": 4102026,
+      "algorithm": "rk",
+      "pattern_start": 0,
+      "expected_matches": 2251,
+      "text_sha256": "556ac82f23f64d2f41b3fb3b9a171791364021aa95c0af6df9e2b5e1d88c8038",
+      "raw_sample_milliseconds": [
+        25.3857,
+        23.4518,
+        22.4031,
+        23.0007,
+        24.0923
+      ],
+      "microseconds_per_call": [
+        1015.428,
+        938.072,
+        896.1239999999999,
+        920.0279999999999,
+        963.6920000000001
+      ],
+      "median_microseconds_per_call": 938.072,
+      "correct_outputs_checked": true
+    }
+  ],
+  "environment": {
+    "recorded_at": "2026-11-04T15:02:50.591194+05:00",
+    "os": "Windows-11-10.0.26300-SP0",
+    "python": "3.12.2",
+    "processor": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+    "logical_cpus": 16,
+    "dotnet_runtimes": "Microsoft.AspNetCore.App 6.0.36 [C:\\Program Files\\dotnet\\shared\\Microsoft.AspNetCore.App]\nMicrosoft.AspNetCore.App 8.0.26 [C:\\Program Files\\dotnet\\shared\\Microsoft.AspNetCore.App]\nMicrosoft.AspNetCore.App 9.0.0 [C:\\Program Files\\dotnet\\shared\\Microsoft.AspNetCore.App]\nMicrosoft.AspNetCore.App 9.0.15 [C:\\Program Files\\dotnet\\shared\\Microsoft.AspNetCore.App]\nMicrosoft.NETCore.App 6.0.36 [C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App]\nMicrosoft.NETCore.App 7.0.18 [C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App]\nMicrosoft.NETCore.App 8.0.26 [C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App]\nMicrosoft.NETCore.App 9.0.0 [C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App]\nMicrosoft.NETCore.App 9.0.15 [C:\\Program Files\\dotnet\\shared\\Microsoft.NETCore.App]\nMicrosoft.WindowsDesktop.App 6.0.36 [C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App]\nMicrosoft.WindowsDesktop.App 7.0.18 [C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App]\nMicrosoft.WindowsDesktop.App 8.0.26 [C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App]\nMicrosoft.WindowsDesktop.App 9.0.0 [C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App]\nMicrosoft.WindowsDesktop.App 9.0.15 [C:\\Program Files\\dotnet\\shared\\Microsoft.WindowsDesktop.App]",
+    "dotnet_sdk": "9.0.313",
+    "cpu_model": "13th Gen Intel(R) Core(TM) i7-13620H",
+    "physical_ram_bytes": 16961822720,
+    "submission_source_sha256": "399fde700602fe431f7a7d32ae28e22ce035ec0f36e52d1999f31426a0f851ae"
+  },
+  "process_metrics": {
+    "elapsed_seconds": 0.5120809999934863,
+    "output_bytes": 8092,
+    "sampled_peak_working_set_mib": 39.34765625,
+    "cpu_affinity": "one available logical CPU",
+    "timeout_seconds": 20
+  }
+}
